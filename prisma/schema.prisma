@@ -1,0 +1,29 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int       @id @default(autoincrement())
+  nonce          String
+  active         Boolean   @default(false)
+  walletAddress  String    @unique @default("") @map("wallet_address")
+  verified       Boolean   @default(false)
+  privateKey     String?   @map("private_key")
+
+
+  @@map("users")
+}
+
+model Product {
+  id             Int       @id @default(autoincrement())
+  name           String
+
+
+  @@map("product")
+}
