@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc --build",
     "dev": "./init_migration.sh && npx tsx watch src/index.ts",
-    "start": "./init_migration.sh && node dist/index.js"
+    "start": "./init_migration.sh && npm run build && node dist/index.js"
   },
   "author": "june6x",
   "license": "ISC",
