@@ -1,7 +1,7 @@
 {
-  "name": "express-solana",
+  "name": "express_template",
   "version": "1.0.0",
-  "description": "Trade solana bot",
+  "description": "Express template",
   "main": "index.ts",
   "type": "module",
   "scripts": {
